@@ -654,9 +654,14 @@ pub mod ziskos {
         }
     }
 
+    // With `no-dma-mem` the guest defines these four itself, in software.
+    #[cfg(not(feature = "no-dma-mem"))]
     core::arch::global_asm!(include_str!("dma/memcpy.s"));
+    #[cfg(not(feature = "no-dma-mem"))]
     core::arch::global_asm!(include_str!("dma/memmove.s"));
+    #[cfg(not(feature = "no-dma-mem"))]
     core::arch::global_asm!(include_str!("dma/memcmp.s"));
     //core::arch::global_asm!(include_str!("dma/inputcpy.s"));
+    #[cfg(not(feature = "no-dma-mem"))]
     core::arch::global_asm!(include_str!("dma/memset.s"));
 }

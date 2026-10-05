@@ -81,6 +81,11 @@ user-hints = [
   "dep:tokio",
 ]
 inputcpy = []
+# EXPERIMENT (L2 latency): no DMA memory operation from ziskos. Leaves memcpy, memmove, memset
+# and memcmp undefined, for the guest to supply in software, and copies in the allocator with
+# plain loads and stores: a guest that issues no DMA operation plans none of the four DMA
+# instances.
+no-dma-mem = []
 # Enabled by `ziskos-staticlib` (libziskos.a). Signals that ziskos is being
 # compiled into a static archive linked against a host application (C or Rust).
 # Surfaced as the `zisk_staticlib` cfg by build.rs.

@@ -1,6 +1,7 @@
 use core::alloc::{GlobalAlloc, Layout};
 
 use crate::alloc::{inline_bump_alloc_aligned, sys_alloc_aligned, sys_alloc_log};
+#[cfg(not(feature = "no-dma-mem"))]
 use crate::ziskos_memcpy;
 use crate::ziskos_memset;
 
@@ -35,7 +36,11 @@ unsafe impl GlobalAlloc for BumpPointerAlloc {
         let new_ptr = inline_bump_alloc_aligned(new_size, layout.align());
         // OOM => panic on allocation
         let copy_size = layout.size().min(new_size);
+        #[cfg(not(feature = "no-dma-mem"))]
         ziskos_memcpy!(ptr: new_ptr, ptr, copy_size);
+        // A plain copy, which lowers to a call to the guest's software memcpy.
+        #[cfg(feature = "no-dma-mem")]
+        core::ptr::copy_nonoverlapping(ptr, new_ptr, copy_size);
 
         new_ptr
     }

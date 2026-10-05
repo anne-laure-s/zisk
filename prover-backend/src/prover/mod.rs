@@ -185,6 +185,16 @@ impl BackendProverOpts {
             options.packed_info(get_packed_info());
         }
 
+        // `ZISK_MEM_GPU_FILL=slot`: the memory airs' contributions are committed by the planner's
+        // kernel straight from the prover's slots (packed GPU runs only); their proofs still take
+        // host traces.
+        if options.gpu
+            && options.packed
+            && std::env::var("ZISK_MEM_GPU_FILL").as_deref() == Ok("slot")
+        {
+            options.gpu_witness_airs(zisk_executor::mem_slot_witness_airs());
+        }
+
         options.verbose_mode(self.verbose.into());
 
         // The plonk wrapper borrows the GPU unified buffer; proofman pads the arena to the

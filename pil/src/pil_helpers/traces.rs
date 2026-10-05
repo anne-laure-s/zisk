@@ -16,7 +16,7 @@ use std::fmt;
 #[allow(dead_code)]
 type FieldExtension<F> = [F; 3];
 
-pub const PILOUT_HASH: &str = "80dfd6fa1e62633bf95951ba8ce5d21334258c2c6840b502cbfef26a8c7ee637";
+pub const PILOUT_HASH: &str = "f0cc936f02ad72e9746ef31961b7e4cab3423f0ae0b1dfec1297f0018da4fd23";
 
 //AIRGROUP CONSTANTS
 
@@ -177,13 +177,13 @@ values!(ZiskProofValues<F> {
 trace_row!(MainFixedRow<F> {
  SEGMENT_STEP: F, __L1__: F,
 });
-pub type MainFixed<F> = GenericTrace<MainFixedRow<F>, 262144, 0, 0>;
+pub type MainFixed<F> = GenericTrace<MainFixedRow<F>, 524288, 0, 0>;
 
 trace_row!(MainTraceRow<F> {
  a:[[u32; 2]; 4], b:[[u32; 2]; 4], c:[[u32; 2]; 4], flag:[bit; 4], pc:[u32; 4], a_src_imm:[bit; 4], a_src_mem:[bit; 4], a_offset_imm0:[u64; 4], a_imm1:[u32; 4], is_precompiled:[bit; 4], b_src_imm:[bit; 4], b_src_mem:[bit; 4], b_offset_imm0:[u64; 4], b_imm1:[u32; 4], b_src_ind:[bit; 4], ind_width:[ubit(4); 4], is_external_op:[bit; 4], op:[u8; 4], store_pc:[bit; 4], store_mem:[bit; 4], store_ind:[bit; 4], store_offset:[u64; 4], set_pc:[bit; 4], jmp_offset1:[u64; 4], jmp_offset2:[u64; 4], m32:[bit; 4], addr1:[u32; 4], a_reg_prev_mem_step:[ubit(38); 4], b_reg_prev_mem_step:[ubit(38); 4], store_reg_prev_mem_step:[ubit(38); 4], store_reg_prev_value:[[u32; 2]; 4], a_src_reg:[bit; 4], b_src_reg:[bit; 4], store_reg:[bit; 4],
 });
 
-pub type MainTrace<R> = GenericTrace<R, 262144, 0, 0>;
+pub type MainTrace<R> = GenericTrace<R, 524288, 0, 0>;
 
 trace_row!(RomFixedRow<F> {
  __L1__: F,
@@ -463,13 +463,13 @@ pub type ArithEqTrace<R> = GenericTrace<R, 65536, 0, 25>;
 trace_row!(ArithEqLargeFixedRow<F> {
  CLK_0: F, __L1__: F,
 });
-pub type ArithEqLargeFixed<F> = GenericTrace<ArithEqLargeFixedRow<F>, 131072, 0, 26>;
+pub type ArithEqLargeFixed<F> = GenericTrace<ArithEqLargeFixedRow<F>, 262144, 0, 26>;
 
 trace_row!(ArithEqLargeTraceRow<F> {
  x1:u16, y1:u16, x2:u16, y2:u16, x3:u16, y3:u16, q0:ubit(22), q1:ubit(22), q2:ubit(22), s:ubit(22), sel_arith256:bit, arith256_clk0:bit, sel_arith256_mod:bit, arith256_mod_clk0:bit, sel_secp256k1_add:bit, secp256k1_add_clk0:bit, sel_secp256k1_dbl:bit, secp256k1_dbl_clk0:bit, sel_bn254_curve_add:bit, bn254_curve_add_clk0:bit, sel_bn254_curve_dbl:bit, bn254_curve_dbl_clk0:bit, sel_bn254_complex_add:bit, bn254_complex_add_clk0:bit, sel_bn254_complex_sub:bit, bn254_complex_sub_clk0:bit, sel_bn254_complex_mul:bit, bn254_complex_mul_clk0:bit, sel_secp256r1_add:bit, secp256r1_add_clk0:bit, sel_secp256r1_dbl:bit, secp256r1_dbl_clk0:bit, x_delta_chunk_inv:u64, x_are_different:bit, x3_lt:bit, y3_lt:bit, delta_x3:u64, delta_y3:u64, carry:[[u64; 2]; 3], step_addr:ubit(40),
 });
 
-pub type ArithEqLargeTrace<R> = GenericTrace<R, 131072, 0, 26>;
+pub type ArithEqLargeTrace<R> = GenericTrace<R, 262144, 0, 26>;
 
 trace_row!(Arith256XFixedRow<F> {
  CLK_0: F, __L1__: F,
@@ -485,13 +485,13 @@ pub type Arith256XTrace<R> = GenericTrace<R, 65536, 0, 27>;
 trace_row!(Arith256XLargeFixedRow<F> {
  CLK_0: F, __L1__: F,
 });
-pub type Arith256XLargeFixed<F> = GenericTrace<Arith256XLargeFixedRow<F>, 131072, 0, 28>;
+pub type Arith256XLargeFixed<F> = GenericTrace<Arith256XLargeFixedRow<F>, 262144, 0, 28>;
 
 trace_row!(Arith256XLargeTraceRow<F> {
  x1:u16, y1:u16, x2:u16, y2:u16, x3:u16, y3:u16, q0:ubit(22), q1:ubit(22), sel_arith256:bit, arith256_clk0:bit, sel_arith256_mod:bit, arith256_mod_clk0:bit, x3_lt:bit, y3_lt:bit, delta_x3:u64, delta_y3:u64, carry:[[u64; 2]; 1], step_addr:ubit(40),
 });
 
-pub type Arith256XLargeTrace<R> = GenericTrace<R, 131072, 0, 28>;
+pub type Arith256XLargeTrace<R> = GenericTrace<R, 262144, 0, 28>;
 
 trace_row!(ArithSecp256K1FixedRow<F> {
  CLK_0: F, __L1__: F,
@@ -507,13 +507,13 @@ pub type ArithSecp256K1Trace<R> = GenericTrace<R, 65536, 0, 29>;
 trace_row!(ArithSecp256K1LargeFixedRow<F> {
  CLK_0: F, __L1__: F,
 });
-pub type ArithSecp256K1LargeFixed<F> = GenericTrace<ArithSecp256K1LargeFixedRow<F>, 131072, 0, 30>;
+pub type ArithSecp256K1LargeFixed<F> = GenericTrace<ArithSecp256K1LargeFixedRow<F>, 262144, 0, 30>;
 
 trace_row!(ArithSecp256K1LargeTraceRow<F> {
  x1:u16, y1:u16, x2:u16, y2:u16, x3:u16, y3:u16, q0:ubit(22), q1:ubit(22), q2:ubit(22), s:ubit(22), sel_secp256k1_add:bit, secp256k1_add_clk0:bit, sel_secp256k1_dbl:bit, secp256k1_dbl_clk0:bit, x_delta_chunk_inv:u64, x_are_different:bit, x3_lt:bit, y3_lt:bit, delta_x3:u64, delta_y3:u64, carry:[[u64; 2]; 3], step_addr:ubit(40),
 });
 
-pub type ArithSecp256K1LargeTrace<R> = GenericTrace<R, 131072, 0, 30>;
+pub type ArithSecp256K1LargeTrace<R> = GenericTrace<R, 262144, 0, 30>;
 
 trace_row!(ArithBn254FixedRow<F> {
  CLK_0: F, __L1__: F,
@@ -529,13 +529,13 @@ pub type ArithBn254Trace<R> = GenericTrace<R, 65536, 0, 31>;
 trace_row!(ArithBn254LargeFixedRow<F> {
  CLK_0: F, __L1__: F,
 });
-pub type ArithBn254LargeFixed<F> = GenericTrace<ArithBn254LargeFixedRow<F>, 131072, 0, 32>;
+pub type ArithBn254LargeFixed<F> = GenericTrace<ArithBn254LargeFixedRow<F>, 262144, 0, 32>;
 
 trace_row!(ArithBn254LargeTraceRow<F> {
  x1:u16, y1:u16, x2:u16, y2:u16, x3:u16, y3:u16, q0:ubit(22), q1:ubit(22), q2:ubit(22), s:ubit(22), sel_bn254_curve_add:bit, bn254_curve_add_clk0:bit, sel_bn254_curve_dbl:bit, bn254_curve_dbl_clk0:bit, sel_bn254_complex_add:bit, bn254_complex_add_clk0:bit, sel_bn254_complex_sub:bit, bn254_complex_sub_clk0:bit, sel_bn254_complex_mul:bit, bn254_complex_mul_clk0:bit, x_delta_chunk_inv:u64, x_are_different:bit, x3_lt:bit, y3_lt:bit, delta_x3:u64, delta_y3:u64, carry:[[u64; 2]; 3], step_addr:ubit(40),
 });
 
-pub type ArithBn254LargeTrace<R> = GenericTrace<R, 131072, 0, 32>;
+pub type ArithBn254LargeTrace<R> = GenericTrace<R, 262144, 0, 32>;
 
 trace_row!(ArithEq384FixedRow<F> {
  FIRST_CLK: F, __L1__: F,
@@ -573,13 +573,13 @@ pub type BabyJubJubTrace<R> = GenericTrace<R, 262144, 0, 35>;
 trace_row!(KeccakfFixedRow<F> {
  CLK_0: F, ROUND_CLK_0: F, __L1__: F,
 });
-pub type KeccakfFixed<F> = GenericTrace<KeccakfFixedRow<F>, 65536, 0, 36>;
+pub type KeccakfFixed<F> = GenericTrace<KeccakfFixedRow<F>, 262144, 0, 36>;
 
 trace_row!(KeccakfTraceRow<F> {
  in_use_a:bit, in_use_b:bit, in_use_a_clk_0:bit, in_use_b_clk_0:bit, state:[ubit(4); 320], c:[ubit(4); 64], chi_acc:[ubit(26); 64], step_addr:ubit(40),
 });
 
-pub type KeccakfTrace<R> = GenericTrace<R, 65536, 0, 36>;
+pub type KeccakfTrace<R> = GenericTrace<R, 262144, 0, 36>;
 
 trace_row!(Sha256fFixedRow<F> {
  CLK_0: F, __L1__: F,
@@ -595,13 +595,13 @@ pub type Sha256fTrace<R> = GenericTrace<R, 262144, 0, 37>;
 trace_row!(PoseidonFixedRow<F> {
  CLK_0: F, __L1__: F,
 });
-pub type PoseidonFixed<F> = GenericTrace<PoseidonFixedRow<F>, 32768, 0, 38>;
+pub type PoseidonFixed<F> = GenericTrace<PoseidonFixedRow<F>, 65536, 0, 38>;
 
 trace_row!(PoseidonTraceRow<F> {
  in_use:bit, in_use_clk_0:bit, sel_poseidon1:bit, chunks:[[u16; 4]; 16], step_addr:ubit(40), t_inv:[u64; 16],
 });
 
-pub type PoseidonTrace<R> = GenericTrace<R, 32768, 0, 38>;
+pub type PoseidonTrace<R> = GenericTrace<R, 65536, 0, 38>;
 
 trace_row!(Blake2brFixedRow<F> {
  CLK_0: F, MSG_IDX: F, __L1__: F,

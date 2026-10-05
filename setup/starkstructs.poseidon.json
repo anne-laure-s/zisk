@@ -1,6 +1,7 @@
 {
   "Keccakf": {
-    "powBits": 21
+    "powBits": 21,
+    "hasCompressor": true
   },
   "VirtualTableZisk0": {
     "powBits": 20
@@ -39,6 +40,36 @@
     "hasCompressor": true
   },
   "ArithEq384Large": {
+    "hasCompressor": true
+  },
+  "Main": {
+    "hasCompressor": true
+  },
+  "Arith256X": {
+    "hasCompressor": true
+  },
+  "Arith256XLarge": {
+    "hasCompressor": true
+  },
+  "ArithSecp256K1": {
+    "hasCompressor": true
+  },
+  "ArithSecp256K1Large": {
+    "hasCompressor": true
+  },
+  "ArithBn254": {
+    "hasCompressor": true
+  },
+  "ArithBn254Large": {
+    "hasCompressor": true
+  },
+  "ArithEq": {
+    "hasCompressor": true
+  },
+  "ArithEqLarge": {
+    "hasCompressor": true
+  },
+  "Poseidon": {
     "hasCompressor": true
   }
 }

@@ -16,7 +16,7 @@ use std::fmt;
 #[allow(dead_code)]
 type FieldExtension<F> = [F; 3];
 
-pub const PILOUT_HASH: &str = "f0cc936f02ad72e9746ef31961b7e4cab3423f0ae0b1dfec1297f0018da4fd23";
+pub const PILOUT_HASH: &str = "debe2ecbb269ccfd966b34d007d74181c45e7aa25970b85005f97d331858e9ad";
 
 //AIRGROUP CONSTANTS
 
@@ -188,13 +188,13 @@ pub type MainTrace<R> = GenericTrace<R, 524288, 0, 0>;
 trace_row!(RomFixedRow<F> {
  __L1__: F,
 });
-pub type RomFixed<F> = GenericTrace<RomFixedRow<F>, 1048576, 0, 1>;
+pub type RomFixed<F> = GenericTrace<RomFixedRow<F>, 4194304, 0, 1>;
 
 trace_row!(RomTraceRow<F> {
  multiplicity:F,
 });
 
-pub type RomTrace<F> = GenericTrace<RomTraceRow<F>, 1048576, 0, 1>;
+pub type RomTrace<F> = GenericTrace<RomTraceRow<F>, 4194304, 0, 1>;
 
 trace_row!(MemFixedRow<F> {
  __L1__: F,
@@ -771,7 +771,7 @@ pub type VirtualTableZisk1Trace<F> = GenericTrace<VirtualTableZisk1TraceRow<F>, 
 trace_row!(RomRomTraceRow<F> {
  is_data: F, line: F, a_offset_imm0: F, a_imm1: F, b_offset_imm0: F, b_imm1: F, ind_width: F, op: F, store_offset: F, jmp_offset1: F, jmp_offset2: F, flags: F,
 });
-pub type RomRomTrace<F> = GenericTrace<RomRomTraceRow<F>, 1048576, 0, 1, 0>;
+pub type RomRomTrace<F> = GenericTrace<RomRomTraceRow<F>, 4194304, 0, 1, 0>;
 
 
 values!(MainAirValues<F> {

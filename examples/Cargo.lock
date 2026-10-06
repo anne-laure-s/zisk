@@ -3583,7 +3583,7 @@ dependencies = [
 [[package]]
 name = "pil2-pilout"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "bytes",
  "prost 0.13.5",
@@ -3594,7 +3594,7 @@ dependencies = [
 [[package]]
 name = "pil2-stark-recurser"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "anyhow",
  "num-bigint",
@@ -3610,7 +3610,7 @@ dependencies = [
 [[package]]
 name = "pil2-stark-setup"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "anyhow",
  "clap",
@@ -3636,12 +3636,13 @@ dependencies = [
 [[package]]
 name = "pil2-std-lib"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "colored",
  "proofman-common",
  "proofman-fields",
  "proofman-hints",
+ "proofman-starks-lib-c",
  "proofman-util",
  "proofman-witness",
  "rayon",
@@ -3822,7 +3823,7 @@ dependencies = [
 [[package]]
 name = "proofman"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "bincode",
  "blake3",
@@ -3854,7 +3855,7 @@ dependencies = [
 [[package]]
 name = "proofman-common"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "borsh",
  "colored",
@@ -3882,7 +3883,7 @@ dependencies = [
 [[package]]
 name = "proofman-curves"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "proofman-fields",
 ]
@@ -3890,7 +3891,7 @@ dependencies = [
 [[package]]
 name = "proofman-exps-codegen"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "anyhow",
  "proofman-starks-src",
@@ -3904,7 +3905,7 @@ dependencies = [
 [[package]]
 name = "proofman-fields"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "blake3",
  "cfg-if",
@@ -3917,7 +3918,7 @@ dependencies = [
 [[package]]
 name = "proofman-hints"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "itoa",
  "proofman-common",
@@ -3929,7 +3930,7 @@ dependencies = [
 [[package]]
 name = "proofman-macros"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3939,7 +3940,7 @@ dependencies = [
 [[package]]
 name = "proofman-starks-lib-c"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "crossbeam-channel",
  "proofman-starks-src",
@@ -3948,12 +3949,12 @@ dependencies = [
 [[package]]
 name = "proofman-starks-src"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 
 [[package]]
 name = "proofman-util"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "colored",
  "sysinfo 0.35.2",
@@ -3962,7 +3963,7 @@ dependencies = [
 [[package]]
 name = "proofman-verifier"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "bincode",
  "num-traits",
@@ -3975,7 +3976,7 @@ dependencies = [
 [[package]]
 name = "proofman-witness"
 version = "1.4.0-alpha"
-source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=pre-develop-1.4.0-alpha#4e34b5f391130c13d722f3b627d99049ad3126b3"
+source = "git+https://github.com/0xPolygonHermez/pil2-proofman.git?branch=feat%2Fgpu-mem-witness-1.4#9cbede7cb3f76484c76ec28e95c789ca047b151a"
 dependencies = [
  "libloading",
  "proofman-common",
@@ -7302,6 +7303,7 @@ dependencies = [
  "zisk-core",
  "zisk-pil",
  "zisk-sm-mem-common",
+ "zisk-sm-mem-planner",
 ]
 
 [[package]]
@@ -7322,6 +7324,7 @@ dependencies = [
 name = "zisk-sm-mem-planner"
 version = "1.4.0-alpha"
 dependencies = [
+ "proofman-fields",
  "proofman-util",
  "tracing",
  "zisk-common",

@@ -82,8 +82,11 @@ airgroup Zisk {
     // Virtual Tables Configuration
     set_range_check_tables_virtual();
     set_max_bits_virtual_tables(21);
-    set_num_virtual_tables(2);
-    set_group_virtual_tables([ARITH_FROPS_TABLE_ID, BINARY_FROPS_TABLE_ID, BINARY_EXTENSION_FROPS_TABLE_ID]);
+    // Minimal-padding PoC, FROPS for L2 blocks: one virtual table, not two. The release gives its
+    // 24 M-row FROPS tables a virtual table of their own (set_num_virtual_tables(2) and
+    // set_group_virtual_tables of the three FROPS table ids), one more proof in every recursion
+    // tree; the FROPS here (state-machines/{arith,binary}/src/*_frops.rs, made by
+    // tools/frops-analyzer from L2 blocks) are about 1 M rows and pack with the other tables.
 
     // Minimal-padding PoC, tuned for blocks of up to 50 transactions: every air a small L2 block
     // instantiates is shorter than in 1.3.1 -- 16 times for most, 8 for Main, 4 for Rom, 2 for
